@@ -44,8 +44,9 @@ body {
 .fotoperfil {
   max-width: 12rem;
   border-radius: 100%;
+  border: 4px solid black;
   margin-left: 3rem;
-  margin-top: -6rem;
+  margin-top: -10rem;
 }
 
 .titulo-centro {
@@ -53,12 +54,12 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0 auto 4rem;
+  margin: -3rem auto 4rem;
 }
 
 .titulo-centro h1 {
   font-family: var(--title-font);
-  font-size: 250%;
+  font-size: 350%;
   margin: 1rem 0 0 0;
 }
 .titulo-centro h4 {
@@ -68,6 +69,7 @@ body {
   background-color: var(--main-color);
   margin: 0 auto 2.5rem;
 }
+
 .titulo-centro a {
   text-decoration: none;
   color: #000;
@@ -75,8 +77,12 @@ body {
 }
 
 article {
-  margin: 15vh 0 25vh 0;
+  margin: 10vh 0 30vh 0;
   font-size: 20px;
+}
+
+article h2 {
+  padding-bottom: 1.5rem;
 }
 
 article aside {
@@ -93,15 +99,60 @@ article aside div figcaption {
   font-size: 70%;
 }
 
-.items-experiencia {
+.items-experiencia,
+.items-docente {
   display: flex;
-  flex-direction: row;
+}
+.logo-exp,
+.logo-docente {
+  text-align: center;
+  width: 20%;
+  min-width: 150px;
+}
+.tex-exp,
+.tex-docente {
+  width: 80%;
 }
 
-.items-experiencia div img {
-  padding: 0 1rem 0 0;
+footer {
+  display: flex;
+  width: 100%;
+  min-height: 20vh;
+  background-color: var(--main-color);
+  color: var(--second-color);
 }
 
+footer h3 {
+  width: 25%;
+  padding: 1rem 2rem;
+}
+footer p {
+  width: 70%;
+  padding: 3rem;
+}
+
+@media only screen and (max-width: 840px) {
+  .divfotoperfil {
+    text-align: center;
+  }
+  .fotoperfil {
+    max-width: 11rem;
+    border-radius: 100%;
+    border: 3px solid black;
+    margin: -5.5rem 0 0 0;
+  }
+  .titulo-centro {
+    margin: -1rem auto 0;
+  }
+  .titulo-centro h1 {
+    font-family: var(--title-font);
+    font-size: 300%;
+  }
+  article {
+    margin-top: 5rem;
+    font-size: 20px;
+  }
+}
 /*  - - listas sin puntos - -  */
 .nodot {
   list-style-type: none;
