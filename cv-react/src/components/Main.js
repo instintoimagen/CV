@@ -1,10 +1,10 @@
 import React from "react";
 
 const Main = () => {
-  const rel = "nofollow";
+  const rel = "noreferrer";
   return (
     <>
-      <main>
+      <main className="container">
         <article id="contacto">
           <h2>Contacto</h2>
           <ul>
@@ -113,7 +113,19 @@ const Main = () => {
                 src="./assets/react.svg"
                 alt="react.js"
               />
-              <figcaption>React.js</figcaption>
+              <figcaption>React</figcaption>
+            </div>
+            <div>
+              <img className="icon-tec" src="./assets/node.svg" alt="node.js" />
+              <figcaption>Node.js</figcaption>
+            </div>
+            <div>
+              <img
+                className="icon-tec"
+                src="./assets/webpack.svg"
+                alt="webpack"
+              />
+              <figcaption>Webpack</figcaption>
             </div>
             <div>
               <img
