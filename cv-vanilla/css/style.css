@@ -85,26 +85,47 @@ article h2 {
   padding-bottom: 1.5rem;
 }
 
+#portfolio h2 a,
+#portfolio p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#portfolio h3 {
+  color: #38642b;
+}
+
+#portfolio img {
+  width: 100px;
+}
+
 article aside {
   display: grid;
+  gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
-article aside div {
+article aside figure {
   display: table-cell;
+  align-self: center;
 }
 
-article aside div figcaption {
+article aside figure figcaption {
   display: inline;
   font-size: 70%;
 }
+article aside figure img {
+  width: 96px;
+}
 
 .items-experiencia,
-.items-docente {
+.items-docente,
+.flex-portfolio {
   display: flex;
 }
 .logo-exp,
-.logo-docente {
+.logo-docente,
+.logo-portfolio {
   text-align: center;
   width: 20%;
   min-width: 150px;
