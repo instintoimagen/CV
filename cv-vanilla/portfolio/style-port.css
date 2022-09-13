@@ -1,0 +1,230 @@
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --title-font: "Overpass", sans-serif;
+  --subtitle-font: "Source Code Pro", monospace;
+  --font-size: 16px;
+  --main-color: #2c2e43;
+  --second-color: #b2b1b9;
+  --third-color: #595260;
+  --fourth-color: #fff159;
+  --main-modal-color: #2c2e43d0;
+  --second-modal-color: #fff159d0;
+  --container-width: 1200px;
+  --dark-main-color: #ccc;
+  --dark-background-color: #222;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--dark-background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: transparent;
+  font: bold 5em/0 var(--main-font);
+  text-align: center;
+  animation: into 4s forwards;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    #ff0 47%,
+    #ff0 49%,
+    #ff0 50%,
+    #fff 50%,
+    #fff 100%
+  );
+  background-size: 300% 100%;
+  background-position: right;
+  -webkit-background-clip: text;
+}
+
+h1:before,
+h1:after {
+  content: "";
+  display: block;
+  background: var(--dark-main-color);
+  width: 100%;
+  height: 0.07em;
+  animation: into2 4s forwards;
+}
+
+.contenedor {
+  max-width: var(--container-width);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-content: space-between; */
+  align-items: flex-start;
+  /*align-content: stretch; */
+  row-gap: 1rem;
+}
+
+h2 {
+  font-size: 0;
+  color: transparent;
+  animation: h2-in 0.5s alternate forwards;
+  animation-delay: 4s;
+  text-align: center;
+  font: bold 1.25em/0 var(--main-font);
+  margin-bottom: 0.5rem;
+}
+
+.card img {
+  width: 0;
+  height: 0;
+  animation: card-in 0.7s alternate forwards;
+  animation-delay: 4s;
+  border: none;
+  margin: 0.5rem;
+  max-width: 250px;
+  height: auto;
+}
+
+figcaption {
+  font-size: 0;
+  /*   top: -2rem; */
+  color: transparent;
+  animation: menu-in 0.5s alternate forwards;
+  animation-delay: 4s;
+  text-align: center;
+  font: bold 1.25em/0 var(--title-font);
+  margin-top: -1.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* figcaption > a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  color: #fff;
+  font: bold 2rem/0.3 Arial, sans-serif;
+  font-size: inherit;
+  transition: all 0.2s;
+} */
+figcaption > a:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  background: var(--dark-main-color);
+  transition: all 0.2s;
+}
+
+figcaption:hover:after {
+  background: #ff0;
+  transform: scaleX(1);
+}
+
+@keyframes into {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: 4.3em;
+    transform: skewY(0deg);
+  }
+  15% {
+    line-height: 0;
+    background-position: right;
+    transform: skewY(-10deg);
+  }
+  25% {
+    width: 4.3em;
+    line-height: 1;
+    transform: skewY(-10deg) translate(0);
+  }
+  85% {
+    width: 4.3em;
+    line-height: 1;
+    transform: skewY(-10deg) translate(0);
+  }
+  90% {
+    line-height: 0;
+    transform: skewY(-10deg) translate(0) scaleX(1);
+  }
+  95% {
+    transform: skewY(-10deg) translate(9em) scaleX(5);
+  }
+  100% {
+    background-position: left;
+    transform: skewY(-10deg) translate(15em) scaleX(1);
+  }
+}
+@keyframes into2 {
+  12% {
+    height: 0.07em;
+  }
+  15% {
+    height: 0.15em;
+  }
+  85% {
+    height: 0.15em;
+  }
+  90% {
+    height: 0.07em;
+  }
+}
+@keyframes menu-in {
+  0% {
+    font-size: 0;
+    color: transparent;
+  }
+  30% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 2rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+  }
+}
+@keyframes h2-in {
+  0% {
+    font-size: 0;
+    color: transparent;
+  }
+  30% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 2.5rem;
+    color: var(--fourth-color);
+  }
+}
+@keyframes card-in {
+  0% {
+    width: 0;
+    height: 0;
+    border: none;
+  }
+  30% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    /*     width: 250px;
+    height: 175px; */
+    width: 100%;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 12px;
+  }
+}

@@ -1,0 +1,87 @@
+:root {
+  --main-font: "Montserrat", sans-serif;
+  --title-font: "Overpass", sans-serif;
+  --subtitle-font: "Source Code Pro", monospace;
+  --font-size: 16px;
+  --main-color: #2c2e43;
+  --second-color: #b2b1b9;
+  --third-color: #595260;
+  --fourth-color: #fff159;
+  --main-modal-color: #2c2e43d0;
+  --second-modal-color: #fff159d0;
+  --container-width: 1200px;
+  /* Dark Mode */
+  --main-color-dark: #303030;
+  --second-color-dark: #454545;
+  --thirth-color-dark: #ececec;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--main-font);
+  font-size: var(--font-size);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav button {
+  max-height: 3rem;
+}
+
+.text-primary {
+  margin-top: 1rem;
+}
+
+#notes {
+  margin-bottom: 4rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100vw;
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* - - Dark Theme  - - */
+.dark-mode {
+  background-color: var(--main-color-dark);
+  color: var(--thirth-color-dark);
+  border: none;
+}
+
+.dark-mode-notes {
+  background-color: var(--thirth-color-dark);
+  background: var(--second-color-dark);
+  color: var(--thirth-color-dark);
+  box-shadow: none;
+  border: 0.5px solid var(--second-color-dark);
+  border: none;
+}
+
+.form-control:focus {
+  background-color: inherit;
+  color: inherit;
+}
