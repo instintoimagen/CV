@@ -10,6 +10,9 @@
   --main-modal-color: #2c2e43d0;
   --second-modal-color: #fff159d0;
   --container-width: 1200px;
+  /* Dark Mode */
+  --dark-main-color: #ccc;
+  --dark-background-color: #222;
 }
 
 html {
@@ -236,8 +239,8 @@ footer p {
 }
 
 .dark-mode {
-  background-color: #222;
-  color: #ccc;
+  background-color: var(--dark-background-color);
+  color: var(--dark-main-color);
 }
 
 /* ++++   menu-hamburguesa  ++++ */
