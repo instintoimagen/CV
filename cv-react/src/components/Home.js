@@ -1,6 +1,9 @@
-import React from "react";
+import { useContext } from "react";
+import ThemeContext from "../context/ThemeContext";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  const { theme, handleTheme } = useContext(ThemeContext);
   return (
     <>
       <section className="planta-dev d-flex">
@@ -50,13 +53,23 @@ const Home = () => {
               </a>
             </li>
             <li>
-              conectá en linkedIn:{" "}
+              conectá en LinkedIn:{" "}
               <a
                 href="https://linkedin.com/in/sergioortegadev"
                 target="_blank"
                 rel="noreferrer"
               >
                 linkedin.com/in/sergioortegadev
+              </a>
+            </li>
+            <li>
+              mi GitHub:{" "}
+              <a
+                href="https://github.com/instintoimagen"
+                target="_blank"
+                rel="noreferrer"
+              >
+                github.com/instintoimagen
               </a>
             </li>
           </ul>
@@ -78,23 +91,19 @@ const Home = () => {
         </article>
 
         <article id="portfolio">
-          <h2>
-            <a href="/portfolio" target="_blank">
-              Portfolio
-            </a>
-          </h2>
-          <div className="d-flex">
-            <figure className="logo-portfolio">
-              <a href="/portfolio" target="_blank">
-                <img src="./assets/portfolio.png" alt="portfolio" />
-              </a>
-            </figure>
-            <p>
-              <a href="/portfolio" target="_blank">
-                Aquí una selección de algunos trabajos
-              </a>
-            </p>
-          </div>
+          <Link to="/portfolio">
+            {
+              <>
+                <h2>Portfolio</h2>
+                <div className="d-flex">
+                  <figure className="logo-portfolio">
+                    <img src="./assets/portfolio.png" alt="portfolio" />
+                  </figure>
+                  <p>Aquí una selección de algunos trabajos</p>
+                </div>
+              </>
+            }
+          </Link>
         </article>
 
         <article id="habilidades">
@@ -124,14 +133,14 @@ const Home = () => {
             <figure>
               <img
                 className="icon-tec"
-                src="./assets/html-5.svg"
-                alt="html-5"
+                src="./assets/react.svg"
+                alt="react.js"
               />
-              <figcaption>HTML 5</figcaption>
+              <figcaption>React.js</figcaption>
             </figure>
             <figure>
-              <img className="icon-tec" src="./assets/css3.svg" alt="css" />
-              <figcaption>CSS</figcaption>
+              <img className="icon-tec" src="./assets/node.svg" alt="node.js" />
+              <figcaption>Node.js</figcaption>
             </figure>
             <figure>
               <img
@@ -140,6 +149,18 @@ const Home = () => {
                 alt="bootstrap"
               />
               <figcaption>Bootstrap</figcaption>
+            </figure>
+            <figure>
+              <img
+                className="icon-tec"
+                src="./assets/html-5.svg"
+                alt="html-5"
+              />
+              <figcaption>HTML 5</figcaption>
+            </figure>
+            <figure>
+              <img className="icon-tec" src="./assets/css3.svg" alt="css" />
+              <figcaption>CSS</figcaption>
             </figure>
             <figure>
               <img className="icon-tec" src="./assets/git.svg" alt="git" />
@@ -152,18 +173,6 @@ const Home = () => {
                 alt="github"
               />
               <figcaption>GitHub</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/react.svg"
-                alt="react.js"
-              />
-              <figcaption>React.js</figcaption>
-            </figure>
-            <figure>
-              <img className="icon-tec" src="./assets/node.svg" alt="node.js" />
-              <figcaption>Node.js</figcaption>
             </figure>
             <figure>
               <img
@@ -227,7 +236,10 @@ const Home = () => {
         <article id="educacion">
           <h2>Educación</h2>
           <ul>
-            <li>Autodidacta</li>
+            <li>
+              Autodidacta <i className="bi bi-person-up"></i>
+            </li>
+            <li>2022 - Argentina Programa</li>
             <li>
               2022 - Cisco -{" "}
               <a
@@ -239,7 +251,7 @@ const Home = () => {
               </a>
             </li>
             <li>2016 - Técnico superior en fotografía - UPC</li>
-            <li>2012 - Lic. en cine y televisión - UNC</li>
+            <li>2011 - Lic. en cine y televisión - UNC</li>
           </ul>
         </article>
 
@@ -404,6 +416,18 @@ const Home = () => {
           gracias ;)
         </p>
       </footer>
+
+      {/* Botón tema oscuro */}
+      <button
+        onClick={() => handleTheme(theme)}
+        className="dark-theme-btn btn btn-dark"
+      >
+        {theme === "light" ? (
+          <i className="bi bi-moon-stars-fill"></i>
+        ) : (
+          <i className="bi bi-brightness-high-fill"></i>
+        )}
+      </button>
     </>
   );
 };
