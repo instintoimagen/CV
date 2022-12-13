@@ -161,14 +161,16 @@ footer p {
   width: 70%;
   padding: 3rem;
 }
-
-/* - - Dark Theme Button - - */
-.dark-theme-btn {
+/*  Up Button */
+.scroll-top-boton {
   position: fixed;
   z-index: 999;
-  bottom: calc(3.2rem + 1vh);
-  right: 1vw;
-  font-size: 2rem;
+  bottom: calc(9rem + 1vh);
+  right: calc(0.5rem + 1vw);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 7px;
+  font-size: 2.5rem;
   font-weight: bold;
   background-color: var(--main-color);
   color: var(--second-color);
@@ -177,17 +179,71 @@ footer p {
   border: 0;
   transition: all 0.3s ease-out;
 }
-.dark-theme-btn:hover {
+.scroll-top-boton:hover {
   background-color: var(--second-color);
   color: var(--main-color);
 }
+.scroll-top-boton div {
+  transform: translate(-0.25rem, -0.45rem);
+}
+.scroll-top-boton i {
+  color: var(--second-color);
+}
+.scroll-top-boton i:hover {
+  color: var(--main-color);
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* - - Dark Theme Button - - */
+.dark-theme-btn {
+  color: var(--second-color);
+  background-color: var(--main-color);
+  position: fixed;
+  z-index: 999;
+  bottom: calc(4.7rem + 1vh);
+  right: calc(0.5rem + 1vw);
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+.dark-theme-btn:hover {
+  color: var(--main-color);
+  background-color: var(--second-color);
+}
 .dark {
-  background-color: var(--dark-background-color);
   color: var(--dark-main-color);
+  background-color: var(--dark-background-color);
 }
 .theme-dark {
-  background-color: var(--dark-background-color);
   color: #fff;
+  background-color: var(--dark-background-color);
+}
+
+/* Hamburguer Menu */
+.panel-btn {
+  color: var(--second-color);
+  position: fixed;
+  z-index: 999;
+  bottom: calc(0.7rem + 1vh);
+  right: calc(0.5rem + 1vw);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.4rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+.panel-btn:hover {
+  color: var(--main-color);
+  background-color: var(--second-color);
 }
 
 @media only screen and (min-width: 992px) {

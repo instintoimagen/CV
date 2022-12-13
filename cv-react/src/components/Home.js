@@ -1,11 +1,41 @@
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
   const { theme, handleTheme } = useContext(ThemeContext);
   return (
     <>
+      {/* Menu Desplegado */}
+      <aside className="panel">
+        <nav className="menu">
+          <HashLink smooth to="#contacto">
+            Contacto
+          </HashLink>
+          <HashLink smooth to="#acerca">
+            Acerca de
+          </HashLink>
+          <HashLink smooth to="#portfolio">
+            Portfolio
+          </HashLink>
+          <HashLink smooth to="#habilidades">
+            Habilidades
+          </HashLink>
+          <HashLink smooth to="#tecnologias">
+            Tecnologías y herramientas
+          </HashLink>
+          <HashLink smooth to="#educacion">
+            Educación
+          </HashLink>
+          <HashLink smooth to="#experiencia">
+            Experiencia
+          </HashLink>
+          <HashLink smooth to="#docente">
+            Experiencia Docente
+          </HashLink>
+        </nav>
+      </aside>
       <section className="planta-dev d-flex">
         <img
           className="planta-dev-img"
@@ -416,6 +446,14 @@ const Home = () => {
           gracias ;)
         </p>
       </footer>
+      {/* Botón Up */}
+      <button className="scroll-top-boton btn btn-dark">
+        <HashLink to="#top">
+          <div>
+            <i className="bi bi-arrow-up-circle-fill"></i>
+          </div>
+        </HashLink>
+      </button>
 
       {/* Botón tema oscuro */}
       <button
@@ -427,6 +465,13 @@ const Home = () => {
         ) : (
           <i className="bi bi-brightness-high-fill"></i>
         )}
+      </button>
+
+      {/* Hamburguer Menu */}
+      <button className="panel-btn hamburger hamburger--spring" type="button">
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
       </button>
     </>
   );
