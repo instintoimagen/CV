@@ -8,7 +8,7 @@
   --third-color: #595260;
   --fourth-color: #fff159;
   --main-modal-color: #2c2e43d0;
-  --second-modal-color: #fff159d0;
+  --second-modal-color: #fff159ea;
   --container-width: 1200px;
   /* Dark Mode */
   --dark-main-color: #ccc;
@@ -177,7 +177,7 @@ footer p {
   cursor: pointer;
   outline: 0;
   border: 0;
-  transition: all 0.3s ease-out;
+  transition: all 0.7s ease-out;
 }
 .scroll-top-boton:hover {
   background-color: var(--second-color);
@@ -226,7 +226,37 @@ footer p {
 }
 
 /* Hamburguer Menu */
-.panel-btn {
+.panel {
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--second-modal-color);
+  position: fixed;
+  z-index: 998;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /* Overflow: Para hacer que el contenido, los link del menú que desbordan, se pueda escrolear */
+  overflow-y: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /* De arriba */
+  transform: translate(0, -100%);
+  /* De abajo */
+  transform: translate(0, 100%);
+  /* De la derecha */
+  transform: translate(100%, 0);
+  /* De la izquierda */
+  transform: translate(-100%, 0);
+  /* De la abajo a la derecha */
+  transform: translate(100%, 100%);
+}
+.panel.is-active {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+.hamburguer-btn {
   color: var(--second-color);
   position: fixed;
   z-index: 999;
@@ -241,9 +271,32 @@ footer p {
   align-items: center;
   background-color: var(--main-color);
 }
-.panel-btn:hover {
+.hamburguer-btn:hover {
   color: var(--main-color);
   background-color: var(--second-color);
+}
+.menu {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+.menu a {
+  padding: 1rem;
+  width: inherit;
+  display: block;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.1s ease-in;
+}
+.menu a:active,
+.menu a:hover {
+  font-weight: bold;
+  color: var(--second-color);
+  background-color: var(--main-modal-color);
 }
 
 @media only screen and (min-width: 992px) {
@@ -265,5 +318,24 @@ footer p {
   }
   article {
     margin: 10vh 0 30vh 0;
+  }
+  .panel {
+    left: 70%;
+    width: 30%;
+  }
+  .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*  align-items: flex-start; */
+    text-align: start;
+    /*text-align: center; */
+  }
+  .menu a {
+    padding: 1rem 0 2rem 0.7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 }

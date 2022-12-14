@@ -5,37 +5,61 @@ import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
   const { theme, handleTheme } = useContext(ThemeContext);
+
+  const handleMenu = () => {
+    //  switcheamos la clase "is-active" de esta forma: buscamos el selector "panel" y luego entra a su lista de clases y con el método toggle añade o quita la clase "is-active"
+    document.querySelector(".panel").classList.toggle("is-active");
+    document.querySelector(".hamburguer-btn").classList.toggle("is-active");
+  };
+  const handleLinkMenu = () => {
+    // con este tercer parámetro quitamos el "is-active" cuando se selecciona algún link del menú, cerrándolo.
+    document.querySelector(".panel").classList.remove("is-active");
+    document.querySelector(".hamburguer-btn").classList.remove("is-active");
+  };
+
+  // Para que el botón aparezca cuando hacemos scroll para abajo, y desaparezca cuando suba. Usamos las propiedades: "pageYOffset" del objeto Window, || o la propiedad "documentElement.scrollTop" del Document, para detectar a qué distancia se ha hecho scroll vertical, y luego determinar que cuando sea mayor de 400 haga aparecer (quita el hidden) al botón. Con else volvemos a ocultarlo.
+  window.addEventListener("scroll", (e) => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > 450) {
+      document.querySelector(".scroll-top-boton").classList.remove("hidden");
+    } else {
+      document.querySelector(".scroll-top-boton").classList.add("hidden");
+    }
+    //podríamos ver la actividad del scroll con console.log(window.pageYOffset, document.documentElement.scrollTop)
+  });
+
   return (
     <>
       {/* Menu Desplegado */}
       <aside className="panel">
         <nav className="menu">
-          <HashLink smooth to="#contacto">
+          <HashLink onClick={handleLinkMenu} smooth to="#contacto">
             Contacto
           </HashLink>
-          <HashLink smooth to="#acerca">
+          <HashLink onClick={handleLinkMenu} smooth to="#acerca">
             Acerca de
           </HashLink>
-          <HashLink smooth to="#portfolio">
+          <HashLink onClick={handleLinkMenu} smooth to="#portfolio">
             Portfolio
           </HashLink>
-          <HashLink smooth to="#habilidades">
+          <HashLink onClick={handleLinkMenu} smooth to="#habilidades">
             Habilidades
           </HashLink>
-          <HashLink smooth to="#tecnologias">
+          <HashLink onClick={handleLinkMenu} smooth to="#tecnologias">
             Tecnologías y herramientas
           </HashLink>
-          <HashLink smooth to="#educacion">
+          <HashLink onClick={handleLinkMenu} smooth to="#educacion">
             Educación
           </HashLink>
-          <HashLink smooth to="#experiencia">
+          <HashLink onClick={handleLinkMenu} smooth to="#experiencia">
             Experiencia
           </HashLink>
-          <HashLink smooth to="#docente">
+          <HashLink onClick={handleLinkMenu} smooth to="#docente">
             Experiencia Docente
           </HashLink>
         </nav>
       </aside>
+
       <section className="planta-dev d-flex">
         <img
           className="planta-dev-img"
@@ -448,7 +472,7 @@ const Home = () => {
       </footer>
       {/* Botón Up */}
       <button className="scroll-top-boton btn btn-dark">
-        <HashLink to="#top">
+        <HashLink smooth to="#top">
           <div>
             <i className="bi bi-arrow-up-circle-fill"></i>
           </div>
@@ -468,7 +492,11 @@ const Home = () => {
       </button>
 
       {/* Hamburguer Menu */}
-      <button className="panel-btn hamburger hamburger--spring" type="button">
+      <button
+        onClick={handleMenu}
+        className="hamburguer-btn hamburger hamburger--spring"
+        type="button"
+      >
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>
