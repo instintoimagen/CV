@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Portfolio.css";
 
 const Portfolio = () => {
@@ -16,169 +17,125 @@ const Portfolio = () => {
               {/*      Proyecto 1  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <img
-                    src="./assets/proy01.jpg"
-                    alt="Proyecto 1 - Portfolio personal CV"
-                  />
-                  <div className="overlay">
-                    <p>Portfolio personal CV</p>
-                    <div className="iconos-contenedor d-flex justify-content-around">
-                      <a
-                        href="https://github.com/instintoimagen"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                      <a
-                        href="https://sergioortega.com.ar"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-browser-chrome"></i>
-                      </a>
+                  <a
+                    href="https://sergioortega.com.ar/portfolio/web-portfolio-generico/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/proy01.jpg"
+                      alt="Proyecto 1 - Portfolio personal CV"
+                    />
+
+                    <div className="overlay">
+                      <p>Portfolio Profesional Genérico</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
-              {/*     <!-- Proyecto 2 --> */}
+              {/*      Proyecto 2  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <img src="./assets/proy02.jpg" alt="Proyecto 2 e-commerce" />
-                  <div className="overlay">
-                    <p>e-commerce simple</p>
-                    <div className="iconos-contenedor d-flex justify-content-around">
-                      <a
-                        href="https://github.com/instintoimagen"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                      <a
-                        href="https://sergioortega.com.ar/citas-simpsons"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-browser-chrome"></i>
-                      </a>
+                  <a
+                    href="https://sergioortega.com.ar/portfolio/web-pedidos/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/proy02.jpg"
+                      alt="Proyecto 1 - Portfolio personal CV"
+                    />
+
+                    <div className="overlay">
+                      <p>E-commerce Simple</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
-              {/*     <!-- Proyecto 3 --> */}
+              {/*      Proyecto 3  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <img
-                    src="./assets/proy03.jpg"
-                    alt="Proyecto 3 web app calculadora"
-                  />
-                  <div className="overlay">
-                    <p>Calculadora</p>
-                    <div className="iconos-contenedor d-flex justify-content-around">
-                      <a
-                        href="https://github.com/instintoimagen"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                      <a
-                        href="https://sergioortega.com.ar/apis-ej"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-browser-chrome"></i>
-                      </a>
+                  <a
+                    href="https://sergioortega.com.ar/portfolio/calc/calc.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/proy03.jpg"
+                      alt="Proyecto 1 - Portfolio personal CV"
+                    />
+
+                    <div className="overlay">
+                      <p>Calculadora</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
-              {/*       Proyecto 4     */}
+              {/*      Proyecto 4  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <img
-                    src="./assets/proy04.jpg"
-                    alt="Proyecto 4 web app notas"
-                  />
-                  <div className="overlay">
-                    <p>Notas</p>
-                    <div className="iconos-contenedor d-flex justify-content-around">
-                      <a
-                        href="https://github.com/instintoimagen"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                      <a
-                        href="https://sergioortega.com.ar/portfolio/web-pedidos"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-browser-chrome"></i>
-                      </a>
+                  <a
+                    href="https://sergioortega.com.ar/portfolio/notas/notas.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/proy04.jpg"
+                      alt="Proyecto 1 - Portfolio personal CV"
+                    />
+
+                    <div className="overlay">
+                      <p>Web app de Notas</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
-              {/*     Proyecto 5  */}
+              {/*      Proyecto 5  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <img
-                    src="./assets/proy05.jpg"
-                    alt="Proyecto 5 API citas de los Simpsons"
-                  />
-                  <div className="overlay">
-                    <p>Frases de Los Simpsons</p>
-                    <div className="iconos-contenedor d-flex justify-content-around">
-                      <a
-                        href="https://github.com/instintoimagen"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                      <a
-                        href="https://sergioortega.com.ar/portfolio/notas/notas.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-browser-chrome"></i>
-                      </a>
+                  <a
+                    href="https://sergioortega.com.ar/portfolio/simpsons/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/proy05.jpg"
+                      alt="Proyecto 1 - Portfolio personal CV"
+                    />
+
+                    <div className="overlay">
+                      <p>Frases de Los Simpsons</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
-              {/*  Proyecto 6  */}
+              {/*      Proyecto 6  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <img
-                    src="./assets/proy06.jpg"
-                    alt="Proyecto 6 API Nasa Photos"
-                  />
-                  <div className="overlay">
-                    <p>API Nasa Photos</p>
-                    <div className="iconos-contenedor d-flex justify-content-around">
-                      <a
-                        href="https://github.com/instintoimagen"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-github"></i>
-                      </a>
-                      <a
-                        href="https://sergioortega.com.ar/portfolio/calc/calc.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="bi bi-browser-chrome"></i>
-                      </a>
+                  <a
+                    href="https://sergioortega.com.ar/portfolio/nasa-api/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="./assets/proy06.jpg"
+                      alt="Proyecto 1 - Portfolio personal CV"
+                    />
+
+                    <div className="overlay">
+                      <p>API Nasa Photos</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="boton-volver">
+            <Link to="/">
+              <button type="button" className="btn btn-outline-light">
+                Volver al CV
+              </button>
+            </Link>
           </div>
         </section>
       </main>
