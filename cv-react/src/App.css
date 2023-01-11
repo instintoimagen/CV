@@ -99,6 +99,11 @@ article h2 {
 a {
   text-decoration: none;
 }
+/* #habilidades {
+  background-image: url(../public/assets/coding.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+} */
 #portfolio a {
   color: inherit;
 }

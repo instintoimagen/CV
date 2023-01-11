@@ -132,6 +132,14 @@ const Home = () => {
         <article id="acerca">
           <h2>Acerca de</h2>
           <p>
+            Desarrollador con experiencia en maquetado de prototipos diseñados
+            con creatividad, amigables para el usuario, teniendo en cuenta los
+            lineamientos de UX. Programador especializado en tecnologías web
+            como JavaScript, React, consumo de APIs, y también Node, Java y
+            MySQL. Manejo de Git y GitHub. Interesado en proyectos escalables,
+            con metodologías ágiles como SCRUM y procesos CI/CD.
+            <br />
+            <br />
             Entusiasta de la tecnología desde siempre, soy un autodidacta nato,
             y me estoy constantemente actualizando. Tengo habilidades blandas
             desarrolladas, especialmente en comunicación organizacional. Soy un
@@ -163,13 +171,15 @@ const Home = () => {
         <article id="habilidades">
           <h2>Habilidades</h2>
           <ul>
-            <li>Desarrollo web Frontend</li>
+            <li>Desarrollo web especializado en Frontend</li>
             <li>Diseño y maquetación web</li>
-            <li>Creación de contenidos digitales</li>
             <li>Autodidacta</li>
-            <li>Fotografía profesional</li>
-            <li>Producción audiovisual</li>
-            <li>Docencia</li>
+            <li>Comunicación efectiva</li>
+            <li>Habilidad analítica</li>
+            <li>
+              Creación de contenidos digitales, y audiovisuales. Fotógrafo
+              profesional. Docente
+            </li>
           </ul>
         </article>
 
@@ -314,6 +324,26 @@ const Home = () => {
           <div className="items-experiencia">
             <div className="logo-exp">
               <img
+                src="./assets/freelance-code.png"
+                height="50px"
+                alt="Sergio Ortega Developer Freelance Logo"
+              />
+            </div>
+            <div className="tex-exp">
+              <h3>Desarrollador Freelance (2022 - actualidad)</h3>
+              <p>
+                Desarrollo de web apps, landing pages y tiendas virtuales
+                (e-commerce). Diseñadas con creatividad, amigables al usuario,
+                siguiendo lineamientos de UX.
+                <br />
+                Programador especializado en tecnologías web como React.js,
+                JavaScript, consumo de APIs; y también Node, Java y MySQL.
+              </p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img
                 src="./assets/Canal_10.png"
                 height="50px"
                 alt="logo canal 10"
@@ -337,7 +367,7 @@ const Home = () => {
             </div>
             <div className="tex-exp">
               <h3>Aplitivo.com (2021)</h3>
-              <p>Diseño, desarrollo y SEO del sitio con ecommerce.</p>
+              <p>Diseño, desarrollo y SEO del sitio con e-commerce.</p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -349,7 +379,7 @@ const Home = () => {
               />
             </div>
             <div className="tex-exp">
-              <h3> InstintoImagen.com.ar (2003 - actualidad)</h3>
+              <h3> InstintoImagen.com.ar (2003 - 2022)</h3>
               <p>
                 Diseño, desarrollo y SEO del sitio. <br />
                 Además es una productora audiovisual en donde he trabajado como
@@ -465,7 +495,7 @@ const Home = () => {
       <footer>
         <h3>Sergio Ortega</h3>
         <p>
-          Última Actualización: Diciembre 2022 <br />
+          Última Actualización: Enero 2023 <br />
           Por consultas, propuestas o proyectos contactar vía mail. Muchas
           gracias ;)
         </p>
