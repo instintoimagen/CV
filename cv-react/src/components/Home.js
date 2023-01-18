@@ -171,7 +171,7 @@ const Home = () => {
         <article id="habilidades">
           <h2>Habilidades</h2>
           <ul>
-            <li>Desarrollo web especializado en Frontend</li>
+            <li>Desarrollo de web app</li>
             <li>Diseño y maquetación web</li>
             <li>Autodidacta</li>
             <li>Comunicación efectiva</li>
@@ -205,6 +205,14 @@ const Home = () => {
             <figure>
               <img className="icon-tec" src="./assets/node.svg" alt="node.js" />
               <figcaption>Node.js</figcaption>
+            </figure>
+            <figure>
+              <img className="icon-tec" src="./assets/java.svg" alt="java" />
+              <figcaption>Java</figcaption>
+            </figure>
+            <figure>
+              <img className="icon-tec" src="./assets/mysql.svg" alt="MySql" />
+              <figcaption>MySQL</figcaption>
             </figure>
             <figure>
               <img
