@@ -1,4 +1,4 @@
-<image src="/readme-img.jpg" alt="Header de la web app CV de Sergio Ortega Desarrollador">
+<image src="./readme-img.jpg" alt="Header de la web app CV de Sergio Ortega Desarrollador">
 
 # Sergio Ortega Desarrollador
 

@@ -85,7 +85,16 @@ const Home = () => {
           rel="noreferrer"
         >
           <button type="button" className="btn btn-outline-secondary">
-            versión impresa 🖨️
+            versión impresa 🖨️ es
+          </button>
+        </a>
+        <a
+          href="https://sergioortega.com.ar/sergioortega-cv-en.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button type="button" className="btn btn-outline-secondary">
+            printed version 🖨️ en
           </button>
         </a>
       </section>
@@ -311,7 +320,29 @@ const Home = () => {
             <li>
               Autodidacta <i className="bi bi-person-up"></i>
             </li>
-            <li>2022 - Argentina Programa</li>
+
+            <li>
+              2022 -{" "}
+              <a
+                href="https://drive.google.com/file/d/16kSITLZ4M0RhV8As0cvlsOrPlWxIgQ3o/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Argentina Programa - Ticmas
+              </a>
+            </li>
+
+            <li>
+              2022 -{" "}
+              <a
+                href="https://drive.google.com/file/d/16fquiHODTlPWt11MuBvuSsyAnxkP8jHw/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Argentina Programa
+              </a>
+            </li>
+
             <li>
               2022 - Cisco -{" "}
               <a
@@ -503,13 +534,13 @@ const Home = () => {
       <footer>
         <h3>Sergio Ortega</h3>
         <p>
-          Última Actualización: Enero 2023 <br />
+          Última Actualización: Marzo 2023 <br />
           Por consultas, propuestas o proyectos contactar vía mail. Muchas
           gracias ;)
         </p>
       </footer>
       {/* Botón Up */}
-      <button className="scroll-top-boton btn btn-dark">
+      <button className="scroll-top-boton btn btn-dark hidden">
         <HashLink smooth to="#top">
           <div>
             <i className="bi bi-arrow-up-circle-fill"></i>
