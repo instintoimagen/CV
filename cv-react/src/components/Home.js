@@ -128,11 +128,11 @@ const Home = () => {
             <li>
               mi GitHub:{" "}
               <a
-                href="https://github.com/instintoimagen"
+                href="https://github.com/sergioortegadev"
                 target="_blank"
                 rel="noreferrer"
               >
-                github.com/instintoimagen
+                github.com/sergioortegadev
               </a>
             </li>
           </ul>
