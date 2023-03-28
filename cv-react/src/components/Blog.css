@@ -1,0 +1,30 @@
+.content {
+  display: flex;
+  justify-content: center;
+}
+.blog-div {
+  max-width: 90vw;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 7px 6px 10px 2px #99999945;
+  background-color: #333;
+}
+.post-figure-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 90vw;
+  padding: 0.25rem 0.5rem;
+  margin-top: 2rem;
+  border-radius: 0.25rem;
+  background-color: #444;
+  color: rgb(253, 245, 137);
+  font-weight: bolder;
+}
+.post-figure-img img {
+  width: 100%;
+  max-height: 30vh;
+  object-fit: cover;
+  object-position: 0 0;
+}
