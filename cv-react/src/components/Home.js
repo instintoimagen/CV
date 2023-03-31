@@ -103,10 +103,11 @@ const Home = () => {
         <article id="contacto">
           <h2>Contacto</h2>
           <ul>
-            <li>vía mail: instintoimagen@gmail.com</li>
-            <li>mi ubicación: Córdoba, Argentina</li>
+            <li>✉ vía mail: instintoimagen@gmail.com</li>
+            <li> 📍 mi ubicación: Córdoba, Argentina</li>
             <li>
-              visitá mi web:{" "}
+              {" "}
+              ✔ visitá mi web:{" "}
               <a
                 href="https://sergioortega.com.ar"
                 target="_blank"
@@ -116,7 +117,8 @@ const Home = () => {
               </a>
             </li>
             <li>
-              conectá en LinkedIn:{" "}
+              {" "}
+              🏙 conectá en LinkedIn:{" "}
               <a
                 href="https://linkedin.com/in/sergioortegadev"
                 target="_blank"
@@ -126,13 +128,24 @@ const Home = () => {
               </a>
             </li>
             <li>
-              mi GitHub:{" "}
+              {" "}
+              💾 mi GitHub:{" "}
               <a
                 href="https://github.com/sergioortegadev"
                 target="_blank"
                 rel="noreferrer"
               >
                 github.com/sergioortegadev
+              </a>
+            </li>
+            <li>
+              🐦 mis tweets:{" "}
+              <a
+                href="https://twitter.com/intent/follow?screen_name=sergioortegadev"
+                target="_blank"
+                rel="noreferrer"
+              >
+                twitter.com/sergioortegadev
               </a>
             </li>
           </ul>
@@ -322,13 +335,30 @@ const Home = () => {
             </li>
 
             <li>
+              2023 -{" "}
+              <a
+                href="https://drive.google.com/file/d/1LAQbGqCcdfEDQjM8IPNVlSHtrYWgv-51/view?usp=share_link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Metodologías ágiles │ UNC - Min. Ciencia y Tecnología -
+              </a>{" "}
+              <a
+                href="https://certificados.campusvirtual.unc.edu.ar/upv/?code=754554925bc64b019b39e3dcc0a556ba"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <small>Código de verificación</small>
+              </a>
+            </li>
+            <li>
               2022 -{" "}
               <a
                 href="https://drive.google.com/file/d/16kSITLZ4M0RhV8As0cvlsOrPlWxIgQ3o/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
               >
-                Argentina Programa - Ticmas
+                Argentina Programa │ Ticmas
               </a>
             </li>
 
@@ -534,7 +564,7 @@ const Home = () => {
       <footer>
         <h3>Sergio Ortega</h3>
         <p>
-          Última Actualización: Marzo 2023 <br />
+          Última Actualización: Abril 2023 <br />
           Por consultas, propuestas o proyectos contactar vía mail. Muchas
           gracias ;)
         </p>

@@ -1,15 +1,28 @@
 import React from "react";
 import "./Blog.css";
 import posts from "../db/Posts";
+// import Tags from "../db/tags";
 import PostFigure from "./PostFigure";
-//console.log(posts);
 
+/* Para extraer la fecha en formato legible
+console.table(posts);
+console.log(posts[0].date);
+const horaActual = new Date();
+console.log(
+  new Intl.DateTimeFormat("es-GB", {
+    dateStyle: "full",
+    timeStyle: "long",
+    timeZone: "America/Cordoba",
+  }).format(horaActual)
+);
+console.log(new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long', timeZone: 'Australia/Sydney' }).format(date));
+*/
 const Blog = () => {
   return (
-    <>
-      <div className="content">
+    <main className="main-blog">
+      <h1>Blog</h1>
+      <div className="content-blog">
         <div className="blog-div">
-          <h1>Blog</h1>
           {posts.map((el) => (
             <PostFigure
               key={el.id}
@@ -21,7 +34,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
-    </>
+    </main>
   );
 };
 
