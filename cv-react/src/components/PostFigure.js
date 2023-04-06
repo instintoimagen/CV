@@ -1,19 +1,20 @@
 import React from "react";
-import DOMPurify from "dompurify";
+import Tags from "../db/Tags";
+import { HashLink } from "react-router-hash-link";
 
-const PostFigure = ({ title, subTitle, date, content }) => {
-  const cleanContent = DOMPurify.sanitize(content);
-
+const PostFigure = ({ tags, title, subTitle, thumb }) => {
   return (
-    <div className="post-figure-div">
-      {/* <h2>{title}</h2>
-      <h3>{subTitle}</h3>
-      <h4>{date}</h4> */}
-      <div
-        className="post-figure-img"
-        dangerouslySetInnerHTML={{ __html: cleanContent }}
-      />
-    </div>
+    <HashLink to="/">
+      <figure className="post-card">
+        <img src={thumb} alt={title} />
+
+        <div className="post-card-text">
+          <h4>#{Tags.map((el) => tags === el.id && el.tag)}</h4>
+          <h3>{title}</h3>
+          <h6>{subTitle}</h6>
+        </div>
+      </figure>
+    </HashLink>
   );
 };
 

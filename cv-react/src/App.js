@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/*" element={<Blog />} />
           </Routes>
         </HashRouter>
       </ThemeProvider>
