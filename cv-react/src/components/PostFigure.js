@@ -2,9 +2,9 @@ import React from "react";
 import Tags from "../db/Tags";
 import { HashLink } from "react-router-hash-link";
 
-const PostFigure = ({ tags, title, subTitle, thumb }) => {
+const PostFigure = ({ tags, title, subTitle, thumb, route }) => {
   return (
-    <HashLink to="/">
+    <HashLink to={route}>
       <figure className="post-card">
         <img src={thumb} alt={title} />
 

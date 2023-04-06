@@ -12,6 +12,7 @@ const BlogIndex = () => {
             title={el.title}
             subTitle={el.subTitle}
             thumb={el.thumb}
+            route={el.route}
           />
         ))}
       </div>

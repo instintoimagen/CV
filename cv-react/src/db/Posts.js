@@ -199,7 +199,7 @@ const posts = [
   },
   {
     id: 1002,
-    author: 1,
+    author: 2,
     category: [1, 2],
     tags: [1, 4],
     title: "Enlazar JavaScript a HTML con el atributo src de script",
@@ -593,7 +593,7 @@ const posts = [
   },
   {
     id: 1004,
-    author: 1,
+    author: 2,
     category: [1, 2],
     tags: [3, 4],
     title:
@@ -988,7 +988,7 @@ const posts = [
   },
   {
     id: 1006,
-    author: 1,
+    author: 2,
     category: [1, 2],
     tags: [1, 2],
     title:
