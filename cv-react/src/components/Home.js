@@ -54,9 +54,6 @@ const Home = () => {
           <HashLink onClick={handleLinkMenu} smooth to="#experiencia">
             Experiencia
           </HashLink>
-          <HashLink onClick={handleLinkMenu} smooth to="#docente">
-            Experiencia Docente
-          </HashLink>
         </nav>
       </aside>
 
@@ -129,7 +126,7 @@ const Home = () => {
             </li>
             <li>
               {" "}
-              💾 mi GitHub:{" "}
+              💾 mi repo GitHub:{" "}
               <a
                 href="https://github.com/sergioortegadev"
                 target="_blank"
@@ -161,16 +158,8 @@ const Home = () => {
             MySQL. Manejo de Git y GitHub. Interesado en proyectos escalables,
             con metodologías ágiles como SCRUM y procesos CI/CD.
             <br />
-            <br />
             Entusiasta de la tecnología desde siempre, soy un autodidacta nato,
-            y me estoy constantemente actualizando. Tengo habilidades blandas
-            desarrolladas, especialmente en comunicación organizacional. Soy un
-            convencido de la potencia del trabajo en equipo, por mi actividad
-            audiovisual casi siempre trabajé en ese formato, incluso en posición
-            de líder. Me interesan los desafíos y respondo muy bien al trabajo
-            bajo presión. Cumplí mis objetivos en la actividad audiovisual tras
-            varios años de dirigir televisión, y decidí continuar con nuevos
-            retos en el área de la programación.
+            y me mantengo actualizando.
           </p>
         </article>
 
@@ -267,14 +256,6 @@ const Home = () => {
                 alt="github"
               />
               <figcaption>GitHub</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/webpack.svg"
-                alt="webpack"
-              />
-              <figcaption>Webpack</figcaption>
             </figure>
             <figure>
               <img
@@ -436,7 +417,10 @@ const Home = () => {
             </div>
             <div className="tex-exp">
               <h3>Aplitivo.com (2021)</h3>
-              <p>Diseño, desarrollo y SEO del sitio con e-commerce.</p>
+              <p>
+                Desarrollador, creación de contenidos y SEO del sitio con
+                e-commerce.
+              </p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -450,7 +434,7 @@ const Home = () => {
             <div className="tex-exp">
               <h3> InstintoImagen.com.ar (2003 - 2022)</h3>
               <p>
-                Diseño, desarrollo y SEO del sitio. <br />
+                Desarrollador, diseñador y SEO del sitio. <br />
                 Además es una productora audiovisual en donde he trabajado como
                 fotógrafo, camarógrafo y editor de video.
               </p>
@@ -494,68 +478,6 @@ const Home = () => {
             <div className="tex-exp">
               <h3>SIEMENS (2007)</h3>
               <p>Representante de atención al cliente.</p>
-            </div>
-          </div>
-        </article>
-
-        <article id="docente">
-          <h2>Experiencia Docente</h2>
-          <div className="items-docente">
-            <div className="logo-docente">
-              <img
-                src="./assets/UB.jpg"
-                height="70px"
-                alt="logo Universidad de Belgrano"
-              />
-            </div>
-            <div className="tex-docente">
-              <h3>Diplomado Periodismo Móvil - UB (2019)</h3>
-              <p>
-                A cargo de las unidades referidas a fotografía y video, para la
-                Universidad de Belgrano extensión en Córdoba.
-              </p>
-            </div>
-          </div>
-          <div className="items-docente">
-            <div className="logo-docente">
-              <img
-                src="./assets/UNC.jpg"
-                height="60px"
-                alt="logo Universidad Nacional de Córdoba"
-              />
-            </div>
-            <div className="tex-docente">
-              <h3>Realización Televisiva - UNC (2017 - 2018)</h3>
-              <p>
-                Integrando el equipo de la cátedra de la carrera de Cine y
-                Televisión, facultad de artes.
-              </p>
-            </div>
-          </div>
-          <div className="items-docente">
-            <div className="logo-docente">
-              <img
-                src="./assets/UPC.png"
-                height="40px"
-                alt="logo Universidad Provincial de Córdoba"
-              />
-            </div>
-            <div className="tex-docente">
-              <h3>Fotografía Documental - UPC (2017 - 2018)</h3>
-              <p>
-                Integrando el equipo de la cátedra de la carrera de Tecnicatura
-                Superior en Fotografía, facultad de diseño y artes.
-              </p>
-            </div>
-          </div>
-          <div className="items-docente">
-            <div className="logo-docente"></div>
-            <div className="tex-docente">
-              <h3>Cursos y talleres online y presencial varios</h3>
-              <p>
-                sobre creación de páginas web con wordpress, fotografía y
-                producción audiovisual.
-              </p>
             </div>
           </div>
         </article>
