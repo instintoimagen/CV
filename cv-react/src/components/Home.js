@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import ThemeContext from "../context/ThemeContext";
+import LangContext from "../context/LangContext";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const Home = () => {
   const { theme, handleTheme } = useContext(ThemeContext);
+  const { text, lang, handleLang } = useContext(LangContext);
 
   const handleMenu = () => {
     //  switcheamos la clase "is-active" de esta forma: buscamos el selector "panel" y luego entra a su lista de clases y con el método toggle añade o quita la clase "is-active"
@@ -34,25 +36,25 @@ const Home = () => {
       <aside className="panel">
         <nav className="menu">
           <HashLink onClick={handleLinkMenu} smooth to="#contacto">
-            Contacto
+            {text.nav_contacto}
           </HashLink>
           <HashLink onClick={handleLinkMenu} smooth to="#acerca">
-            Acerca de
+            {text.nav_acerca}
           </HashLink>
           <HashLink onClick={handleLinkMenu} smooth to="#portfolio">
-            Portfolio
+            {text.nav_portfolio}
           </HashLink>
           <HashLink onClick={handleLinkMenu} smooth to="#habilidades">
-            Habilidades
+            {text.nav_habilidades}
           </HashLink>
           <HashLink onClick={handleLinkMenu} smooth to="#tecnologias">
-            Tecnologías y herramientas
+            {text.nav_tecnologias}
           </HashLink>
           <HashLink onClick={handleLinkMenu} smooth to="#educacion">
-            Educación
+            {text.nav_educacion}
           </HashLink>
           <HashLink onClick={handleLinkMenu} smooth to="#experiencia">
-            Experiencia
+            {text.nav_experiencia}
           </HashLink>
         </nav>
       </aside>
@@ -75,36 +77,38 @@ const Home = () => {
 
       <section className="titulo-centro">
         <h1>Sergio Ortega</h1>
-        <h4>DESARROLLADOR</h4>
-        <a
-          href="https://sergioortega.com.ar/sergioortega-cv.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button" className="btn btn-outline-secondary">
-            versión impresa 🖨️ es
-          </button>
-        </a>
-        <a
-          href="https://sergioortega.com.ar/sergioortega-cv-en.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button" className="btn btn-outline-secondary">
-            printed version 🖨️ en
-          </button>
-        </a>
+        <h4>{text.tituloCentro_h4}</h4>
+        {lang === "es" ? (
+          <a
+            href="https://sergioortega.com.ar/sergioortega-cv.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button type="button" className="btn btn-outline-secondary">
+              versión impresa 🖨️ es
+            </button>
+          </a>
+        ) : (
+          <a
+            href="https://sergioortega.com.ar/sergioortega-cv-en.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button type="button" className="btn btn-outline-secondary">
+              printed version 🖨️ en
+            </button>
+          </a>
+        )}
       </section>
 
       <main className="container">
         <article id="contacto">
-          <h2>Contacto</h2>
+          <h2>{text.contacto_h2}</h2>
           <ul>
-            <li>✉ vía mail: instintoimagen@gmail.com</li>
-            <li> 📍 mi ubicación: Córdoba, Argentina</li>
+            <li>{text.contact_li_mail}</li>
+            <li>{text.contact_li_location}</li>
             <li>
-              {" "}
-              ✔ visitá mi web:{" "}
+              {text.contact_li_web}
               <a
                 href="https://sergioortega.com.ar"
                 target="_blank"
@@ -114,8 +118,7 @@ const Home = () => {
               </a>
             </li>
             <li>
-              {" "}
-              🏙 conectá en LinkedIn:{" "}
+              {text.contact_li_linkedin}
               <a
                 href="https://linkedin.com/in/sergioortegadev"
                 target="_blank"
@@ -125,8 +128,7 @@ const Home = () => {
               </a>
             </li>
             <li>
-              {" "}
-              💾 mi repo GitHub:{" "}
+              {text.contact_li_github}
               <a
                 href="https://github.com/sergioortegadev"
                 target="_blank"
@@ -136,7 +138,7 @@ const Home = () => {
               </a>
             </li>
             <li>
-              🐦 mis tweets:{" "}
+              {text.contact_li_twitter}
               <a
                 href="https://twitter.com/intent/follow?screen_name=sergioortegadev"
                 target="_blank"
@@ -149,18 +151,8 @@ const Home = () => {
         </article>
 
         <article id="acerca">
-          <h2>Acerca de</h2>
-          <p>
-            Desarrollador con experiencia en maquetado de prototipos diseñados
-            con creatividad, amigables para el usuario, teniendo en cuenta los
-            lineamientos de UX. Programador especializado en tecnologías web
-            como JavaScript, React, consumo de APIs, y también Node, Java y
-            MySQL. Manejo de Git y GitHub. Interesado en proyectos escalables,
-            con metodologías ágiles como SCRUM y procesos CI/CD.
-            <br />
-            Entusiasta de la tecnología desde siempre, soy un autodidacta nato,
-            y me mantengo actualizando.
-          </p>
+          <h2>{text.acerca_h2}</h2>
+          <p>{text.acerca_p}</p>
         </article>
 
         <article id="portfolio">
@@ -172,7 +164,7 @@ const Home = () => {
                   <figure className="logo-portfolio">
                     <img src="./assets/portfolio.png" alt="portfolio" />
                   </figure>
-                  <p>Aquí una selección de algunos trabajos</p>
+                  <p>{text.portfolio_p}</p>
                 </div>
               </>
             }
@@ -180,22 +172,19 @@ const Home = () => {
         </article>
 
         <article id="habilidades">
-          <h2>Habilidades</h2>
+          <h2>{text.habilidades_h2}</h2>
           <ul>
-            <li>Desarrollo de web app</li>
-            <li>Diseño y maquetación web</li>
-            <li>Autodidacta</li>
-            <li>Comunicación efectiva</li>
-            <li>Habilidad analítica</li>
-            <li>
-              Creación de contenidos digitales, y audiovisuales. Fotógrafo
-              profesional. Docente
-            </li>
+            <li>{text.habilidades_li_desarrollo}</li>
+            <li>{text.habilidades_li_diseño}</li>
+            <li>{text.habilidades_li_autodidacta}</li>
+            <li>{text.habilidades_li_comunicacion}</li>
+            <li>{text.habilidades_li_analitica}</li>
+            <li>{text.habilidades_li_contenido}</li>
           </ul>
         </article>
 
         <article id="tecnologias">
-          <h2>Tecnologías y herramientas</h2>
+          <h2>{text.tecnologias_h2}</h2>
           <div className="tecno-grilla">
             <figure>
               <img
@@ -309,10 +298,11 @@ const Home = () => {
         </article>
 
         <article id="educacion">
-          <h2>Educación</h2>
+          <h2>{text.educacion_h2}</h2>
           <ul>
             <li>
-              Autodidacta <i className="bi bi-person-up"></i>
+              {text.educacion_li_autodidacta}{" "}
+              <i className="bi bi-person-up"></i>
             </li>
 
             <li>
@@ -322,14 +312,15 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Metodologías ágiles │ UNC - Min. Ciencia y Tecnología -
+                {text.educacion_li_metodologias} │ UNC - Min. Ciencia y
+                Tecnología -
               </a>{" "}
               <a
                 href="https://certificados.campusvirtual.unc.edu.ar/upv/?code=754554925bc64b019b39e3dcc0a556ba"
                 target="_blank"
                 rel="noreferrer"
               >
-                <small>Código de verificación</small>
+                <small>{text.educacion_li_metodologias_small}</small>
               </a>
             </li>
             <li>
@@ -364,13 +355,13 @@ const Home = () => {
                 NDG Linux Unhatched
               </a>
             </li>
-            <li>2016 - Técnico superior en fotografía - UPC</li>
-            <li>2011 - Lic. en cine y televisión - UNC</li>
+            <li>2016 - {text.educacion_li_fotografia} - UPC</li>
+            <li>2011 - {text.educacion_li_cine} - UNC</li>
           </ul>
         </article>
 
         <article id="experiencia">
-          <h2>Experiencia</h2>
+          <h2>{text.experiencia_h2}</h2>
           <div className="items-experiencia">
             <div className="logo-exp">
               <img
@@ -380,15 +371,9 @@ const Home = () => {
               />
             </div>
             <div className="tex-exp">
-              <h3>Desarrollador Freelance (2022 - actualidad)</h3>
-              <p>
-                Desarrollo de web apps, landing pages y tiendas virtuales
-                (e-commerce). Diseñadas con creatividad, amigables al usuario,
-                siguiendo lineamientos de UX.
-                <br />
-                Programador especializado en tecnologías web como React.js,
-                JavaScript, consumo de APIs; y también Node, Java y MySQL.
-              </p>
+              <h3>{text.experiencia_01_h3}</h3>
+              <p>{text.experiencia_01_p1}</p>
+              <p>{text.experiencia_01_p2}</p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -400,11 +385,9 @@ const Home = () => {
               />
             </div>
             <div className="tex-exp">
-              <h3>Canal 10 - SRT UNC (2015 - actualidad)</h3>
-              <p>
-                Director de programas (2020 - actualidad). <br />
-                Operador de tape (2015 - 2020).
-              </p>
+              <h3>{text.experiencia_02_h3}</h3>
+              <p>{text.experiencia_02_p1}</p>
+              <p>{text.experiencia_02_p2}</p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -416,11 +399,8 @@ const Home = () => {
               />
             </div>
             <div className="tex-exp">
-              <h3>Aplitivo.com (2021)</h3>
-              <p>
-                Desarrollador, creación de contenidos y SEO del sitio con
-                e-commerce.
-              </p>
+              <h3>{text.experiencia_03_h3}</h3>
+              <p>{text.experiencia_03_p1}</p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -432,12 +412,9 @@ const Home = () => {
               />
             </div>
             <div className="tex-exp">
-              <h3> InstintoImagen.com.ar (2003 - 2022)</h3>
-              <p>
-                Desarrollador, diseñador y SEO del sitio. <br />
-                Además es una productora audiovisual en donde he trabajado como
-                fotógrafo, camarógrafo y editor de video.
-              </p>
+              <h3>{text.experiencia_04_h3}</h3>
+              <p>{text.experiencia_04_p1}</p>
+              <p>{text.experiencia_04_p2}</p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -445,12 +422,8 @@ const Home = () => {
               <img src="./assets/La_Voz.png" height="50px" alt="logo La Voz" />
             </div>
             <div className="tex-exp">
-              <h3>La Voz (2011 - 2013)</h3>
-              <p>
-                Fotógrafo contratado del diario en el período indicado, y
-                también continúo como fotógrafo freelance para el mismo medio
-                hasta la actualidad.
-              </p>
+              <h3>{text.experiencia_05_h3}</h3>
+              <p>{text.experiencia_05_p1}</p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -458,13 +431,8 @@ const Home = () => {
               <img src="./assets/apex.png" height="50px" alt="logo apex" />
             </div>
             <div className="tex-exp">
-              <h3>Apex América (2007 - 2011)</h3>
-              <p>
-                Trainer (capacitador con certificación del cliente) para nuevos
-                ingresos a la atención telefónica de soporte técnico de
-                internet. También analista de calidad y representante de
-                atención técnica de internet.
-              </p>
+              <h3>{text.experiencia_06_h3}</h3>
+              <p>{text.experiencia_06_p1}</p>
             </div>
           </div>
           <div className="items-experiencia">
@@ -476,8 +444,8 @@ const Home = () => {
               />
             </div>
             <div className="tex-exp">
-              <h3>SIEMENS (2007)</h3>
-              <p>Representante de atención al cliente.</p>
+              <h3>{text.experiencia_07_h3}</h3>
+              <p>{text.experiencia_07_p1}</p>
             </div>
           </div>
         </article>
@@ -485,12 +453,12 @@ const Home = () => {
 
       <footer>
         <h3>Sergio Ortega</h3>
-        <p>
-          Última Actualización: Abril 2023 <br />
-          Por consultas, propuestas o proyectos contactar vía mail. Muchas
-          gracias ;)
-        </p>
+        <div>
+          <p>{text.footer_p1}</p>
+          <p>{text.footer_p2}</p>
+        </div>
       </footer>
+
       {/* Botón Up */}
       <button className="scroll-top-boton btn btn-dark hidden">
         <HashLink smooth to="#top">
@@ -500,7 +468,15 @@ const Home = () => {
         </HashLink>
       </button>
 
-      {/* Botón tema oscuro */}
+      {/* Botón idioma - Lang Button */}
+      <button
+        className="lang-boton btn btn-dark"
+        onClick={() => handleLang(lang)}
+      >
+        <div>{lang === "es" ? "En" : "Es"}</div>
+      </button>
+
+      {/* Botón tema oscuro - Dark theme */}
       <button
         onClick={() => handleTheme(theme)}
         className="dark-theme-btn btn btn-dark"

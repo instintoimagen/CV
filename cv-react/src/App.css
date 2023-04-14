@@ -149,6 +149,10 @@ a {
 .items-experiencia,
 .items-docente {
   display: flex;
+  margin-bottom: 2rem;
+}
+.items-experiencia p {
+  margin-bottom: 0;
 }
 
 footer {
@@ -164,14 +168,18 @@ footer h3 {
   padding: 1rem 2rem;
 }
 footer p {
+  margin-bottom: 0;
+}
+footer div {
   width: 70%;
   padding: 3rem;
 }
+
 /*  Up Button */
 .scroll-top-boton {
   position: fixed;
   z-index: 999;
-  bottom: calc(9rem + 1vh);
+  bottom: calc(12.9rem + 1vh);
   right: calc(0.5rem + 1vw);
   width: 3.5rem;
   height: 3.5rem;
@@ -201,6 +209,33 @@ footer p {
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+/*  Botón idioma - Lang Button */
+.lang-boton {
+  color: var(--second-color);
+  position: fixed;
+  z-index: 999;
+  bottom: calc(8.9rem + 1vh);
+  right: calc(0.5rem + 1vw);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 7px;
+  font-size: 2.3rem;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.7s ease-out;
+}
+.lang-boton:hover {
+  color: var(--main-color);
+  background-color: var(--second-color);
+}
+.lang-boton div {
+  transform: translate(-0.25rem, -0.45rem);
 }
 
 /* - - Dark Theme Button - - */
