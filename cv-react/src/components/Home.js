@@ -364,6 +364,16 @@ const Home = () => {
           <h2>{text.experiencia_h2}</h2>
           <div className="items-experiencia">
             <div className="logo-exp">
+              <img src="./assets/tpl.jpg" height="50px" alt="TPL Logo" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_00_h3}</h3>
+              <p>{text.experiencia_00_p1}</p>
+              <p>{text.experiencia_00_p2}</p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
               <img
                 src="./assets/freelance-code.png"
                 height="50px"
