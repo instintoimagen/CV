@@ -50,50 +50,34 @@ const Home = () => {
           <HashLink onClick={handleLinkMenu} smooth to="#tecnologias">
             {text.nav_tecnologias}
           </HashLink>
-          <HashLink onClick={handleLinkMenu} smooth to="#educacion">
-            {text.nav_educacion}
-          </HashLink>
           <HashLink onClick={handleLinkMenu} smooth to="#experiencia">
             {text.nav_experiencia}
+          </HashLink>
+          <HashLink onClick={handleLinkMenu} smooth to="#educacion">
+            {text.nav_educacion}
           </HashLink>
         </nav>
       </aside>
 
       <section className="planta-dev d-flex">
-        <img
-          className="planta-dev-img"
-          src="./assets/dev-plant.jpg"
-          alt="La planta Dev"
-        />
+        <img className="planta-dev-img" src="./assets/GitHub-profile.jpg" alt="La planta Dev" />
       </section>
 
       <section className="foto-perfil">
-        <img
-          className="foto-perfil-img"
-          src="./assets/perfil.jpg"
-          alt="foto de perfil de Sergio Ortega"
-        />
+        <img className="foto-perfil-img" src="./assets/perfil.jpg" alt="foto de perfil de Sergio Ortega" />
       </section>
 
       <section className="titulo-centro">
         <h1>Sergio Ortega</h1>
         <h4>{text.tituloCentro_h4}</h4>
         {lang === "es" ? (
-          <a
-            href="https://sergioortega.com.ar/sergioortega-cv.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://sergioortega.com.ar/sergioortega-cv.pdf" target="_blank" rel="noreferrer">
             <button type="button" className="btn btn-outline-secondary">
               versión impresa 🖨️ es
             </button>
           </a>
         ) : (
-          <a
-            href="https://sergioortega.com.ar/sergioortega-cv-en.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://sergioortega.com.ar/sergioortega-cv-en.pdf" target="_blank" rel="noreferrer">
             <button type="button" className="btn btn-outline-secondary">
               printed version 🖨️ en
             </button>
@@ -109,41 +93,25 @@ const Home = () => {
             <li>{text.contact_li_location}</li>
             <li>
               {text.contact_li_web}
-              <a
-                href="https://sergioortega.com.ar"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://sergioortega.com.ar" target="_blank" rel="noreferrer">
                 sergioortega.com.ar
               </a>
             </li>
             <li>
               {text.contact_li_linkedin}
-              <a
-                href="https://linkedin.com/in/sergioortegadev"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://linkedin.com/in/sergioortegadev" target="_blank" rel="noreferrer">
                 linkedin.com/in/sergioortegadev
               </a>
             </li>
             <li>
               {text.contact_li_github}
-              <a
-                href="https://github.com/sergioortegadev"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/sergioortegadev" target="_blank" rel="noreferrer">
                 github.com/sergioortegadev
               </a>
             </li>
             <li>
               {text.contact_li_twitter}
-              <a
-                href="https://twitter.com/intent/follow?screen_name=sergioortegadev"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://twitter.com/intent/follow?screen_name=sergioortegadev" target="_blank" rel="noreferrer">
                 twitter.com/sergioortegadev
               </a>
             </li>
@@ -174,12 +142,11 @@ const Home = () => {
         <article id="habilidades">
           <h2>{text.habilidades_h2}</h2>
           <ul>
-            <li>{text.habilidades_li_desarrollo}</li>
-            <li>{text.habilidades_li_diseño}</li>
-            <li>{text.habilidades_li_autodidacta}</li>
+            <li>{text.habilidades_li_equipo}</li>
             <li>{text.habilidades_li_comunicacion}</li>
+            <li>{text.habilidades_li_presion}</li>
             <li>{text.habilidades_li_analitica}</li>
-            <li>{text.habilidades_li_contenido}</li>
+            <li>{text.habilidades_li_autodidacta}</li>
           </ul>
         </article>
 
@@ -187,19 +154,11 @@ const Home = () => {
           <h2>{text.tecnologias_h2}</h2>
           <div className="tecno-grilla">
             <figure>
-              <img
-                className="icon-tec"
-                src="./assets/javascript.svg"
-                alt="javascript"
-              />
+              <img className="icon-tec" src="./assets/javascript.svg" alt="javascript" />
               <figcaption>JavaScript</figcaption>
             </figure>
             <figure>
-              <img
-                className="icon-tec"
-                src="./assets/react.svg"
-                alt="react.js"
-              />
+              <img className="icon-tec" src="./assets/react.svg" alt="react.js" />
               <figcaption>React.js</figcaption>
             </figure>
             <figure>
@@ -207,104 +166,138 @@ const Home = () => {
               <figcaption>Node.js</figcaption>
             </figure>
             <figure>
-              <img className="icon-tec" src="./assets/java.svg" alt="java" />
-              <figcaption>Java</figcaption>
+              <img className="icon-tec" src="./assets/mongodb_.svg" alt="logo MongoDB" />
+              <figcaption>MongoDB</figcaption>
             </figure>
             <figure>
-              <img className="icon-tec" src="./assets/mysql.svg" alt="MySql" />
-              <figcaption>MySQL</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/bootstrap.svg"
-                alt="bootstrap"
-              />
+              <img className="icon-tec" src="./assets/bootstrap.svg" alt="bootstrap" />
               <figcaption>Bootstrap</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/html-5.svg"
-                alt="html-5"
-              />
-              <figcaption>HTML 5</figcaption>
-            </figure>
-            <figure>
-              <img className="icon-tec" src="./assets/css3.svg" alt="css" />
-              <figcaption>CSS</figcaption>
             </figure>
             <figure>
               <img className="icon-tec" src="./assets/git.svg" alt="git" />
               <figcaption>Git</figcaption>
             </figure>
             <figure>
-              <img
-                className="icon-tec"
-                src="./assets/github.svg"
-                alt="github"
-              />
+              <img className="icon-tec" src="./assets/github.svg" alt="github" />
               <figcaption>GitHub</figcaption>
             </figure>
             <figure>
-              <img
-                className="icon-tec"
-                src="./assets/terminal.svg"
-                alt="linux"
-              />
-              <figcaption>Linux</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/wordpress.svg"
-                alt="wordpress"
-              />
-              <figcaption>Wordpress</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/photoshop.svg"
-                alt="photoshop"
-              />
-              <figcaption>Photoshop</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/premiere-pro.svg"
-                alt="premiere"
-              />
-              <figcaption>Premiere</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/effects.svg"
-                alt="after effects"
-              />
-              <figcaption>After Effects</figcaption>
-            </figure>
-            <figure>
-              <img
-                className="icon-tec"
-                src="./assets/lightroom.svg"
-                alt="lightroom"
-              />
-              <figcaption>Lightroom</figcaption>
+              <img className="icon-tec" src="./assets/java.svg" alt="java" />
+              <figcaption>Java</figcaption>
             </figure>
           </div>
+        </article>
+
+        <article id="experiencia">
+          <h2>{text.experiencia_h2}</h2>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/tpl.jpg" height="50px" alt="TPL Logo" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_00_h3}</h3>
+              <p>{text.experiencia_00_p1}</p>
+              <p>{text.experiencia_00_p2}</p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/freelance-code.png" height="50px" alt="Sergio Ortega Developer Freelance Logo" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_01_h3}</h3>
+              <p>{text.experiencia_01_p1}</p>
+              <p>{text.experiencia_01_p2}</p>
+            </div>
+          </div>
+
+          <p>{text.educacion_anterior}</p>
+
+          {/* <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/Canal_10.png" height="50px" alt="logo canal 10" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_02_h3}</h3>
+              <p>{text.experiencia_02_p1}</p>
+              <p>{text.experiencia_02_p2}</p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/aplitivo.png" height="50px" alt="logo aplitivo" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_03_h3}</h3>
+              <p>{text.experiencia_03_p1}</p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/instinto.jpg" height="50px" alt="logo InstintoImagen" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_04_h3}</h3>
+              <p>{text.experiencia_04_p1}</p>
+              <p>{text.experiencia_04_p2}</p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/La_Voz.png" height="50px" alt="logo La Voz" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_05_h3}</h3>
+              <p>{text.experiencia_05_p1}</p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/apex.png" height="50px" alt="logo apex" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_06_h3}</h3>
+              <p>{text.experiencia_06_p1}</p>
+            </div>
+          </div>
+          <div className="items-experiencia">
+            <div className="logo-exp">
+              <img src="./assets/Siemens.png" height="50px" alt="logo siemens" />
+            </div>
+            <div className="tex-exp">
+              <h3>{text.experiencia_07_h3}</h3>
+              <p>{text.experiencia_07_p1}</p>
+            </div>
+          </div> */}
         </article>
 
         <article id="educacion">
           <h2>{text.educacion_h2}</h2>
           <ul>
             <li>
-              {text.educacion_li_autodidacta}{" "}
-              <i className="bi bi-person-up"></i>
+              {text.educacion_li_autodidacta} <i className="bi bi-person-up"></i>
             </li>
 
+            <li>
+              2023 -{" "}
+              <a
+                href="https://drive.google.com/file/d/16edeP5Vfz-XbSGTfchXgM5Fc8HCqxA5A/view"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {text.educacion_li_node} │ DS
+              </a>{" "}
+            </li>
+            <li>
+              2023 -{" "}
+              <a
+                href="https://drive.google.com/file/d/1SlrL5mQfP8YLflhK4qw8I4OrolbCvAtt/view?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {text.educacion_li_ciberseguridad} │ Cámara de Comercio de Córdoba - CorLab - UTN
+              </a>{" "}
+            </li>
             <li>
               2023 -{" "}
               <a
@@ -312,15 +305,14 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {text.educacion_li_metodologias} │ UNC - Min. Ciencia y
-                Tecnología -
+                {text.educacion_li_metodologias} │ UNC - Min. Ciencia y Tecnología -
               </a>{" "}
               <a
                 href="https://certificados.campusvirtual.unc.edu.ar/upv/?code=754554925bc64b019b39e3dcc0a556ba"
                 target="_blank"
                 rel="noreferrer"
               >
-                <small>{text.educacion_li_metodologias_small}</small>
+                <small>{text.educacion_li_code_small}</small>
               </a>
             </li>
             <li>
@@ -355,109 +347,7 @@ const Home = () => {
                 NDG Linux Unhatched
               </a>
             </li>
-            <li>2016 - {text.educacion_li_fotografia} - UPC</li>
-            <li>2011 - {text.educacion_li_cine} - UNC</li>
           </ul>
-        </article>
-
-        <article id="experiencia">
-          <h2>{text.experiencia_h2}</h2>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img src="./assets/tpl.jpg" height="50px" alt="TPL Logo" />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_00_h3}</h3>
-              <p>{text.experiencia_00_p1}</p>
-              <p>{text.experiencia_00_p2}</p>
-            </div>
-          </div>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img
-                src="./assets/freelance-code.png"
-                height="50px"
-                alt="Sergio Ortega Developer Freelance Logo"
-              />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_01_h3}</h3>
-              <p>{text.experiencia_01_p1}</p>
-              <p>{text.experiencia_01_p2}</p>
-            </div>
-          </div>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img
-                src="./assets/Canal_10.png"
-                height="50px"
-                alt="logo canal 10"
-              />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_02_h3}</h3>
-              <p>{text.experiencia_02_p1}</p>
-              <p>{text.experiencia_02_p2}</p>
-            </div>
-          </div>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img
-                src="./assets/aplitivo.png"
-                height="50px"
-                alt="logo aplitivo"
-              />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_03_h3}</h3>
-              <p>{text.experiencia_03_p1}</p>
-            </div>
-          </div>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img
-                src="./assets/instinto.jpg"
-                height="50px"
-                alt="logo InstintoImagen"
-              />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_04_h3}</h3>
-              <p>{text.experiencia_04_p1}</p>
-              <p>{text.experiencia_04_p2}</p>
-            </div>
-          </div>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img src="./assets/La_Voz.png" height="50px" alt="logo La Voz" />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_05_h3}</h3>
-              <p>{text.experiencia_05_p1}</p>
-            </div>
-          </div>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img src="./assets/apex.png" height="50px" alt="logo apex" />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_06_h3}</h3>
-              <p>{text.experiencia_06_p1}</p>
-            </div>
-          </div>
-          <div className="items-experiencia">
-            <div className="logo-exp">
-              <img
-                src="./assets/Siemens.png"
-                height="50px"
-                alt="logo siemens"
-              />
-            </div>
-            <div className="tex-exp">
-              <h3>{text.experiencia_07_h3}</h3>
-              <p>{text.experiencia_07_p1}</p>
-            </div>
-          </div>
         </article>
       </main>
 
@@ -479,31 +369,17 @@ const Home = () => {
       </button>
 
       {/* Botón idioma - Lang Button */}
-      <button
-        className="lang-boton btn btn-dark"
-        onClick={() => handleLang(lang)}
-      >
+      <button className="lang-boton btn btn-dark" onClick={() => handleLang(lang)}>
         <div>{lang === "es" ? "En" : "Es"}</div>
       </button>
 
       {/* Botón tema oscuro - Dark theme */}
-      <button
-        onClick={() => handleTheme(theme)}
-        className="dark-theme-btn btn btn-dark"
-      >
-        {theme === "light" ? (
-          <i className="bi bi-moon-stars-fill"></i>
-        ) : (
-          <i className="bi bi-brightness-high-fill"></i>
-        )}
+      <button onClick={() => handleTheme(theme)} className="dark-theme-btn btn btn-dark">
+        {theme === "light" ? <i className="bi bi-moon-stars-fill"></i> : <i className="bi bi-brightness-high-fill"></i>}
       </button>
 
       {/* Hamburguer Menu */}
-      <button
-        onClick={handleMenu}
-        className="hamburguer-btn hamburger hamburger--spring"
-        type="button"
-      >
+      <button onClick={handleMenu} className="hamburguer-btn hamburger hamburger--spring" type="button">
         <span className="hamburger-box">
           <span className="hamburger-inner"></span>
         </span>

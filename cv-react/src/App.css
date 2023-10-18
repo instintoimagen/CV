@@ -51,7 +51,7 @@ body {
   max-height: 25vh;
   min-height: 20vh;
   object-fit: cover;
-  object-position: 50% 70%;
+  object-position: 50% 40%;
 }
 .foto-perfil {
   text-align: center;
@@ -145,6 +145,7 @@ a {
 }
 .tecno-grilla figure img {
   width: 96px;
+  height: 96px;
 }
 .items-experiencia,
 .items-docente {
