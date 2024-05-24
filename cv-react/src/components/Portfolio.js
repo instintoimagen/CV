@@ -14,6 +14,19 @@ const Portfolio = () => {
           {/*   Galeria de Proyectos  */}
           <div className="container text-center proyectos-contenedor">
             <div className="row">
+              {/*      Proyecto 0  */}
+              <div className="col-12 col-md-6 col-lg-4">
+                <div className="proyecto">
+                  <a href="https://simple-chat-tkrk.onrender.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/proy00.jpg" alt="Proyecto 1 - Portfolio personal CV" />
+
+                    <div className="overlay">
+                      <p>Microservicio SimpleChat</p>
+                      <p>Backend de chat basado en node. Con persistencia en DB.</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
               {/*      Proyecto 1  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
@@ -22,10 +35,7 @@ const Portfolio = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="./assets/proy01.jpg"
-                      alt="Proyecto 1 - Portfolio personal CV"
-                    />
+                    <img src="./assets/proy01.jpg" alt="Proyecto 1 - Portfolio personal CV" />
 
                     <div className="overlay">
                       <p>Portfolio Profesional Genérico</p>
@@ -41,10 +51,7 @@ const Portfolio = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="./assets/proy02.jpg"
-                      alt="Proyecto 1 - Portfolio personal CV"
-                    />
+                    <img src="./assets/proy02.jpg" alt="Proyecto 1 - Portfolio personal CV" />
 
                     <div className="overlay">
                       <p>E-commerce Simple</p>
@@ -60,10 +67,7 @@ const Portfolio = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="./assets/proy03.jpg"
-                      alt="Proyecto 1 - Portfolio personal CV"
-                    />
+                    <img src="./assets/proy03.jpg" alt="Proyecto 1 - Portfolio personal CV" />
 
                     <div className="overlay">
                       <p>Calculadora</p>
@@ -79,10 +83,7 @@ const Portfolio = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="./assets/proy04.jpg"
-                      alt="Proyecto 1 - Portfolio personal CV"
-                    />
+                    <img src="./assets/proy04.jpg" alt="Proyecto 1 - Portfolio personal CV" />
 
                     <div className="overlay">
                       <p>Web app de Notas</p>
@@ -93,15 +94,8 @@ const Portfolio = () => {
               {/*      Proyecto 5  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <a
-                    href="https://sergioortega.com.ar/portfolio/simpsons/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./assets/proy05.jpg"
-                      alt="Proyecto 1 - Portfolio personal CV"
-                    />
+                  <a href="https://sergioortega.com.ar/portfolio/simpsons/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/proy05.jpg" alt="Proyecto 1 - Portfolio personal CV" />
 
                     <div className="overlay">
                       <p>Frases de Los Simpsons</p>
@@ -112,15 +106,8 @@ const Portfolio = () => {
               {/*      Proyecto 6  */}
               <div className="col-12 col-md-6 col-lg-4">
                 <div className="proyecto">
-                  <a
-                    href="https://sergioortega.com.ar/portfolio/nasa-api/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      src="./assets/proy06.jpg"
-                      alt="Proyecto 1 - Portfolio personal CV"
-                    />
+                  <a href="https://sergioortega.com.ar/portfolio/nasa-api/" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/proy06.jpg" alt="Proyecto 1 - Portfolio personal CV" />
 
                     <div className="overlay">
                       <p>API Nasa Photos</p>

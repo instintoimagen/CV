@@ -119,14 +119,7 @@
   text-align: center;
   animation: into 4s forwards;
   overflow: hidden;
-  background: linear-gradient(
-    90deg,
-    #ff0 47%,
-    #ff0 49%,
-    #ff0 50%,
-    #fff 50%,
-    #fff 100%
-  );
+  background: linear-gradient(90deg, #ff0 47%, #ff0 49%, #ff0 50%, #fff 50%, #fff 100%);
   background-size: 300% 100%;
   background-position: right;
   -webkit-background-clip: text;
